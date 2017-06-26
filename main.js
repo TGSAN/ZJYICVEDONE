@@ -1,9 +1,4 @@
-﻿function getQueryString(name) { 
-var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-var r = window.location.search.substr(1).match(reg); 
-if (r != null) return unescape(r[2]); return null; 
-}
-$.ajax({type:"POST",url:"/Study/cell/updateVideo",data:{courseId:g// ==UserScript==
+﻿// ==UserScript==
 // @name         智慧职教省流量刷课脚本
 // @namespace    http://www.cloudmoe.com/
 // @version      0.1
@@ -20,4 +15,4 @@ var r = window.location.search.substr(1).match(reg);
 if (r != null) return unescape(r[2]); return null; 
 }
 $.ajax({type:"POST",url:"/Study/cell/updateVideo",data:{courseId:getQueryString("courseId"),cellId:getQueryString("cellId"),learnTime:999999999999}});
-// Your code here...etQueryString("courseId"),cellId:getQueryString("cellId"),learnTime:999999999999}});
+// Your code here
