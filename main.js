@@ -9,10 +9,10 @@
 // ==/UserScript==
 /* jshint -W097 */
 'use strict';
-function getQueryString(name) { 
-var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
-var r = window.location.search.substr(1).match(reg); 
-if (r != null) return unescape(r[2]); return null; 
+function getQueryString(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var r = window.location.search.substr(1).match(reg);
+if (r != null) return unescape(r[2]); return null;
 }
 $.ajax({type:"POST",url:"/Study/cell/updateVideo",data:{courseId:getQueryString("courseId"),cellId:getQueryString("cellId"),learnTime:999999999999}});
 // Your code here
